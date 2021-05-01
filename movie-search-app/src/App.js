@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import Row from './Row';
+import requests from './requests';
 
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
      hii
      HIHI
      HI
+     <Row title="Netflix originals" fetchUrl={requests.fetchNetflixOriginals} />
+     <Row title="Trending now" fetchUrl={requests.fetchTrending} />
     </div>
   );
 }
