@@ -1,6 +1,7 @@
 import './App.css';
 import Row from './Row';
 import requests from './requests';
+import Banner from "./Banner";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
      hii
      HIHI
      HI
+     <Banner />
      <Row title="Netflix originals" isLargeRow fetchUrl={requests.fetchNetflixOriginals} />
      <Row title="Trending now" fetchUrl={requests.fetchTrending} />
      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
