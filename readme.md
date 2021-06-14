@@ -1,6 +1,4 @@
 #
 
-Projects created by following tutorias.
-Reflecting on things taught. Maybe spicing things up and diving deeper into things unclear.
-So hopefully not just monky see monky do.
-![Alt text](monky_mirror.jpg)
+Projects created by following tutorials.
+Reflecting on things taught. Maybe researching deeper into things unclear and spicing code.
