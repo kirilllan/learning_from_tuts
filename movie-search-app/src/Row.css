@@ -1,5 +1,6 @@
 .row {
   margin-left: 20px;
+  margin-bottom: 50px;
   color: white;
 }
 .row__posters {
@@ -7,6 +8,22 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
+  /* scroll horizontally automatically at set
+     speed, then when you stop hovering it scroll
+     backwards, nice dynamic effect but not
+     nessecarily best for UX ??  
+     user can still hold shift to scroll
+     faster when effect is happening tho...*/
+  transition: 60s;
+  -webkit-transition: 60s;
+  -moz-transition: 60s;
+  transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+}
+.row__posters:hover {
+  margin-left: -10000px;
+  /* ...end of comment above */
 }
 .row__posters::-webkit-scrollbar {
   display: none;
