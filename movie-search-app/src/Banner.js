@@ -15,7 +15,11 @@ function Banner() {
       return request;
     }
     updateBanner();
-  }, [])  
+  }, [])
+
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  };
 
   return (
     <header>
@@ -34,10 +38,12 @@ function Banner() {
             </div>
           </h1> 
         <h1 className="banner__description">
-          {movie?.overview || movie?.bannerOverview}
+          {truncate(movie?.overview, 150)}
         </h1>
         </div>
       </div>
+
+      <div className="banner--fadeBottom" />
     </header>
   )
 }
