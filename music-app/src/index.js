@@ -4,7 +4,9 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataLayer initialState reducer>
+      <App />
+    </DataLayer>
   </React.StrictMode>,
   document.getElementById('root')
 );
