@@ -14,4 +14,4 @@ const scopes = [
   "user-modify-playback-state"
 ];
 
-export const loginUrl = `${authEndPoint}?client_id=${clientId}&redirect_uri=${redirectUri}`;
+export const loginUrl = `${authEndPoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}`;
