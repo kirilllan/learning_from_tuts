@@ -4,7 +4,7 @@ import "./sidebar.css";
 function Sidebar() {
   return (
     <div className="sidebar">
-      i am sidebar
+      <img className="sidebar__logo" src="pelican.webp" alt="logo"/>
     </div>
   )
 }
