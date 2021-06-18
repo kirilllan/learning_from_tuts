@@ -19,7 +19,7 @@ function App() {
     if (_token) {
       dispatch({
         type: "SET_TOKEN",
-        token: _token,
+        token: _token
       });
       spotify.setAccessToken(_token);
       spotify.getMe().then(user => {
@@ -30,6 +30,12 @@ function App() {
          })
       })
     }
+      spotify.getUserPlaylists().then(playlists => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists
+        })
+      })
   }, []);
 
   console.log('user ███', user)
@@ -39,7 +45,7 @@ function App() {
       {
         token ? (<Player spotify={spotify} />) : (<Login />)
       }
-      <Login />
+
     </div>
   );
 }
