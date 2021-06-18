@@ -2,8 +2,11 @@ import React from 'react';
 import "./header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
+import { useDataLayerValue } from "./DataLayer";
 
 function Header() {
+  const [{user}, dispatch] = useDataLayerValue();
+  
   return (
     <div className="header">
       <div className="header__left">
@@ -11,8 +14,8 @@ function Header() {
         <input placeholder="search for artists, songs or podcasts" type="text"></input>
       </div>
       <div className="header__right">
-        <Avatar src="" alt="avatar" />
-        <h4>UsErNaMe</h4>
+        <Avatar src={user?.images[0]?.url} alt="users avatar" />
+        <h4>{user?.display_name}</h4>
       </div>
     </div>
   )
