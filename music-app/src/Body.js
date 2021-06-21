@@ -2,6 +2,9 @@ import React from 'react'
 import "./body.css";
 import Header from "./Header";
 import { useDataLayerValue} from "./DataLayer";
+import { PlayCircleFilled } from '@material-ui/icons';
+import FavoriteIcon from "@material-ui/icons/FavoriteBorder";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 function Body({ spotify }) {
   const [{discover_weekly}, dispatch] = useDataLayerValue();
@@ -19,7 +22,13 @@ function Body({ spotify }) {
         </div>
       </div>
       <div className="body__songs">
-        
+        <div className="body__icons">
+          <PlayCircleFilled className="body__shuffle" />
+          <FavoriteIcon fontSize="large" />
+          <MoreHorizIcon />
+        </div>
+        {discover_weekly?.tracks.items.map(item =>
+          (<SongRow track={item.track} /> ))}
       </div>
     </div>
   )
