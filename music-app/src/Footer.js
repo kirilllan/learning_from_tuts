@@ -14,9 +14,10 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer__left">
-        <img src="" alt="album cover" className="footer__albumLogo" />
-        <h4>Yeah!</h4>
-        <p>Usher</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Yandhi_Cover_Art_%28Free_License%29.jpg" alt="album cover" className="footer__albumLogo" />
+        <h4>{'heh'}</h4>
+        <br />
+        <p>non</p>
       </div>
 
       <div className="footer__center">
