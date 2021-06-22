@@ -1,7 +1,7 @@
 # React movie search app
 
-site demo gifu (compressed -50% 2.4MB):
-[!Alt text](public/site_demo_gifu.gif)
+site demo gifu (compressed -50%, 2.4MB):
+![page demo gifu](public/site_demo_gifu.gif?raw=true)
 
 Browse movie images catalog and watch
 trailers of those movies.
