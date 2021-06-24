@@ -42,7 +42,8 @@
   background-color: transparent;
   border: none;
   min-width: 35px;
+  color: gray;
 }
-.header__search > input:active {
-  border: none;
+.header__search > input:focus {
+  outline: none;
 }
