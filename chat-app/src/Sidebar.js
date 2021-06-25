@@ -1,7 +1,10 @@
 import React from 'react'
 import "./sidebar.css";
+import SidebarOption from "./SidebarOption";
+
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecordRounded";
 import CreateIcon from "@material-ui/icons/Create";
+import InsertCommentIcon from "@material-ui/icons/InsertComment";
 
 function Sidebar() {
   return (
@@ -16,6 +19,8 @@ function Sidebar() {
         </div>
         <CreateIcon />
       </div>
+        <SidebarOption Icon={InsertCommentIcon} title="Threads" />
+        <SidebarOption title="oo channel" />
     </div>
   )
 }
