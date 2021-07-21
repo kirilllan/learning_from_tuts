@@ -1,4 +1,5 @@
 <?php 
+include("inc/data.php");
 $section = null;
 if (isset($_GET["cat"])) {
   if ($_GET["cat"] == 'books') {
@@ -18,10 +19,14 @@ include("inc/header.php");
 <div class="section catalog page">
   <div class="wrapper">
     <h1><?php echo $pageTitle; ?></h1>
-    <ul>
+    <ul class="items">
       <?php 
         foreach($catalog as $item) {
-          echo '<li>' . $item . '</li>';    
+          echo '<li><a href="#"><img src="'
+            . $item["img"] . '"alt="'
+            . $item["title"] . '" />' 
+            . '<p>view details</p>' 
+            . '</a></li>';    
         } 
       ?>
     </ul>
