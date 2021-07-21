@@ -42,6 +42,21 @@ include("inc/header.php");
           <th>Year</th>
           <td><?php echo $item["year"]; ?></td>
         </tr>
+        <?php
+          if (strtolower($item["category"]) == 'books') {?>
+          <tr>
+            <th>Authors</th>
+            <td><?php echo implode(", ",$item["authors"]); ?></td>
+           </tr>
+            <tr>
+              <th>Publisher</th>
+              <td><?php echo $item["publisher"]; ?></td>
+            </tr>
+            <tr>
+              <th>ISBN</th>
+              <td><?php echo $item["isbn"]; ?></td>
+            </tr>
+          <?php } ?>
       </table>
     </div>
   </div>
