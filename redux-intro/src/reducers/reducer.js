@@ -4,6 +4,16 @@ const reducer = (state = initialState, action) => {
       ...state, counter: state.counter + 1
     }
   }
+  if (action.type === "DECREMENT") {
+    return {
+      ...state, counter: state.counter - 1
+    }
+  }
+  if (action.type === "RESET") {
+    return {
+      ...state, counter: 0
+    }
+  }
   return state;
 }
 

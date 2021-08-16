@@ -8,7 +8,8 @@ class Counter extends Component {
         <h1>Your score is: {this.props.ctr}</h1>
         <div>
           <button onClick={this.props.onIncCounter}>+</button>
-          <button>-</button>
+          <button onClick={this.props.onDecCounter}>-</button>
+          <button onClick={this.props.reset}>reset</button>
         </div>
       </div>
     )
@@ -23,7 +24,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onIncCounter: () => dispatch({ type: "INCREMENT" })
+    onIncCounter: () => dispatch({ type: "INCREMENT" }),
+    onDecCounter: () => dispatch({ type: "DECREMENT" }),
+    reset: () => dispatch({ type: "RESET" })
   }
 }
 
