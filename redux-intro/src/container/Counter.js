@@ -9,7 +9,7 @@ class Counter extends Component {
         <div>
           <button onClick={this.props.onIncCounter}>+</button>
           <button onClick={this.props.onDecCounter}>-</button>
-          <button onClick={this.props.reset}>reset</button>
+          <button onClick={this.props.resetCounter}>reset</button>
         </div>
       </div>
     )
@@ -26,7 +26,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onIncCounter: () => dispatch({ type: "INCREMENT" }),
     onDecCounter: () => dispatch({ type: "DECREMENT" }),
-    reset: () => dispatch({ type: "RESET" })
+    resetCounter: () => dispatch({ type: "RESET" })
   }
 }
 
