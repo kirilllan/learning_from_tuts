@@ -17,7 +17,7 @@ class Counter extends Component {
 
 const mapStateToProps = state => {
   return {
-    ctr: state.counter
+    ctr: 100//state.counter
   }
 }
 
