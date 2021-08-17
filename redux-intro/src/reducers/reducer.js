@@ -9,6 +9,9 @@ const reducer = (state = initialState, action) => {
     case actionTypes.REMOVE: return { ...state, counter: state.counter - action.value }
     case actionTypes.RESET: return { ...state, counter: 0 }
     case actionTypes.STORE_RESULT: return { ...state, results: state.results.concat({ id: new Date(), value: state.counter }) }
+    case actionTypes.DELETE_RESULT:
+      const updatedArray = state.results.filter(item => item.id !== action.item)
+      return { ...state, results: updatedArray }
   }
   return state
 }
