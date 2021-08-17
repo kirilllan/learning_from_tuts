@@ -11,8 +11,8 @@ class Counter extends Component {
         <div>
           <button onClick={this.props.onIncCounter}>+</button>
           <button onClick={this.props.onDecCounter}>-</button>
-          <button onClick={this.props.onAddFive}>+5</button>
-          <button onClick={this.props.onRemoveFive}>-5</button>
+          <button onClick={this.props.onAdd}>+5</button>
+          <button onClick={this.props.onRemove}>-5</button>
           <button onClick={this.props.resetCounter}>reset</button>
         </div>
       </div>
@@ -30,8 +30,8 @@ const mapDispatchToProps = dispatch => {
   return {
     onIncCounter: () => dispatch({ type: actionTypes.INCREMENT }),
     onDecCounter: () => dispatch({ type: actionTypes.DECREMENT }),
-    onAddFive: () => dispatch({ type: actionTypes.ADDFIVE }),
-    onRemoveFive: () => dispatch({ type: actionTypes.REMOVEFIVE }),
+    onAdd: () => dispatch({ type: actionTypes.ADD, valie: 5 }),
+    onRemove: () => dispatch({ type: actionTypes.REMOVE, value: 5 }),
     resetCounter: () => dispatch({ type: actionTypes.RESET })
   }
 }
