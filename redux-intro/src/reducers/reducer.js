@@ -8,6 +8,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.ADD: return { ...state, counter: state.counter + action.value }
     case actionTypes.REMOVE: return { ...state, counter: state.counter - action.value }
     case actionTypes.RESET: return { ...state, counter: 0 }
+    case actionTypes.STORE_RESULT: return { ...state, results: state.results.concat({ id: new Date(), value: state.counter }) }
   }
   return state
 }
